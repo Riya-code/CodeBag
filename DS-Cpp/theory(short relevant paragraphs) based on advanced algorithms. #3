@@ -1,0 +1,25 @@
+###1). Breadth First Search or BFS for a Graph
+Breadth First Traversal (or Search) for a graph is similar to Breadth First Traversal of a tree (See method 2 of this post). 
+The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again. To avoid processing a node more than once,
+we use a boolean visited array. For simplicity, it is assumed that all vertices are reachable from the starting vertex.
+For example, we start traversal from vertex 2. When we come to vertex 0, 
+we look for all adjacent vertices of it. 2 is also an adjacent vertex of 0. If we don’t mark visited vertices,
+then 2 will be processed again and it will become a non-terminating process. A Breadth First Traversal of the following graph is 2, 0, 3, 1.
+
+###2). Depth First Search or DFS for a Graph
+Depth First Traversal (or Search) for a graph is similar to Depth First Traversal of a tree. 
+The only catch here is, unlike trees, graphs may contain cycles, a node may be visited twice. To avoid processing a node more than once,
+use a boolean visited array. 
+
+###3). Johnson’s algorithm for All-pairs shortest paths
+The problem is to find shortest paths between every pair of vertices in a given weighted directed Graph and weights may be negative.
+We have discussed Floyd Warshall Algorithm for this problem. Time complexity of Floyd Warshall Algorithm is Θ(V3). Using Johnson’s algorithm, 
+we can find all pair shortest paths in O(V2log V + VE) time.
+
+
+###4). Topological Sorting
+Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u v, vertex u comes before v in the ordering. 
+Topological Sorting for a graph is not possible if the graph is not a DAG.
+For example, a topological sorting of the following graph is “5 4 2 3 1 0”. There can be more than one topological sorting for a graph. 
+For example, another topological sorting of the following graph is “4 5 2 3 1 0”. 
+The first vertex in topological sorting is always a vertex with in-degree as 0 (a vertex with no incoming edges).
